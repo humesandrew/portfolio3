@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Andy Humes - Portfolio </title>
+  </head>
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#"><h1>Andy Humes</h1></a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sections</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Bio</a></li>
+        <li><a class="dropdown-item" href="#">Projects</a></li>
+        <li><a class="dropdown-item" href="#">Contact</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="mailto:humes.andrew@gmail.com" target="_blank">Email</a>
+    </li>
+    
+  </ul>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-5 card vh-100 bioCard" id= "card1" data-state= "unclicked">
+        Bio
+      </div>
+      <div class="col-5 card projectCard" id= "card2" data-state= "unclicked">
+        Projects
+      </div>
+      <div class="col card contactCard" id= "card3" data-state= "unclicked">
+        Contact Info
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+ 
