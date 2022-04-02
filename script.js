@@ -40,7 +40,10 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.setAttribute("id", "projectCardApiEl");
   projectCardApiEl.setAttribute("class", "card col-10");
   projectCardApiEl.textContent = "";
-  projectCardApiEl.style.backgroundColor = "transparent";
+  projectCardApiEl.style.backgroundColor = "white";
+  projectCardApiEl.style.display = "flex";
+  projectCardApiEl.style.flexDirection = "column"
+  projectCardApiEl.style.justifyContent = "space-around"
   projectCard.appendChild(projectCardApiEl);
   
 
@@ -55,6 +58,21 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton.setAttribute("style", "margin-top: 20px");
   createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: auto");
   createProjectButton.style.fontWeight = "bold";
+
+
+
+
+  var createProjectButton2 = document.createElement("button");
+  projectCardApiEl.appendChild(createProjectButton2);
+  createProjectButton2.textContent = "ChartMD";
+  createProjectButton2.setAttribute(
+    "class",
+    "btn btn-secondary btn-lg btn-light"
+  );
+  createProjectButton2.setAttribute("id", "projectButton2");
+  createProjectButton2.setAttribute("style", "margin-top: 20px");
+  createProjectButton2.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: auto");
+  createProjectButton2.style.fontWeight = "bold";
   // createProjectButton.setAttribute("style", "background-size: cover");
   
   var createProjectButtonLinks = document.createElement("div");
@@ -68,61 +86,8 @@ projectCard.onclick = function displayProjectCard() {
     window.open("https://humesandrew.github.io/Belly-Buster/");
   };
 
-  var createApiCard = document.createElement("div");
-  createApiCard.textContent = "";
-  createApiCard.setAttribute("id", "apiCard");
-  createApiCard.setAttribute("style", "margin-top: 30px;");
-  projectCardApiEl.appendChild(createApiCard);
 
-  function getRepos() {
-    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=5";
-    fetch(apiUrl)
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (data) {
-            console.log(data);
 
-            for (var i = 0; i < data.length; i++) {
-              var repoName = "Title: " + data[i].name;
-              var repoUrl = "https://humesandrew.github.io/" + data[i].name;
-              var addRepoSection = document.createElement("hr");
-              var addRepoSectionText = document.createElement("div");
-              addRepoSectionText.textContent = "GitHub Url: " + repoUrl;
-              addRepoSectionText.setAttribute("style", "font-size: 10px");
-              addRepoSectionText.style.color = 'black';
-              
-              
-
-              var repoEl = document.createElement("a");
-              repoEl.textContent = repoName;
-              repoEl.setAttribute("id", repoName);
-
-              repoEl.setAttribute("class", "btn btn-secondary btn-block");
-              repoEl.setAttribute("href", repoUrl);
-              repoEl.setAttribute("style", "display: flex");
-              repoEl.setAttribute("style", "justify-content: center");
-              repoEl.setAttribute("style", "align-items: column");
-              repoEl.setAttribute("style", "background-image: url('githubthumb.png')");
-              repoEl.style.color = 'black';
-              repoEl.style.fontWeight = 'bold';
-
-            
-
-              projectCardApiEl.appendChild(repoEl).appendChild(addRepoSection).appendChild(addRepoSectionText);
-            }
-
-            
-          });
-        } else {
-          alert("Error: " + response.statusText);
-        }
-      })
-      .catch(function (error) {
-        alert("Unable to connect to GitHub");
-      });
-  }
-
-  getRepos();
 };
 
 ///creating the contact card on click////////
