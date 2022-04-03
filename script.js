@@ -112,7 +112,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.appendChild(createApiCard);
   
   function getRepos() {
-    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=5";
+    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=3";
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
@@ -120,13 +120,23 @@ projectCard.onclick = function displayProjectCard() {
             console.log(data);
   
             for (var i = 0; i < data.length; i++) {
-              var repoName = "Title: " + data[i].name;
+              var repoName = data[i].name;
               var repoUrl = "https://humesandrew.github.io/" + data[i].name;
               var addRepoSection = document.createElement("hr");
-              var addRepoSectionText = document.createElement("div");
-              addRepoSectionText.textContent = "GitHub Url: " + repoUrl;
-              addRepoSectionText.setAttribute("style", "font-size: 10px");
-              addRepoSectionText.style.color = 'black';
+              var addRepoSectionButton = document.createElement("button");
+              var createGhApiLink = document.createElement("button");
+              createGhApiLink.setAttribute(
+                "class",
+                "btn btn-secondary btn-tiny btn-light"
+              );
+              createGhApiLink.setAttribute("id", "GhApiLink2");
+              createGhApiLink.textContent = "Github Repository";
+              addRepoSectionButton.appendChild(createProjectBreak);
+              addRepoSectionButton.appendChild(createGhApiLink);
+              var clickGhLink2Button = document.getElementById("GhLink2");
+              clickGhLink2Button.onclick = function () {
+                window.open("https://github.com/stuartwood2010/chartMd_app");
+              };
               
               
   
@@ -134,7 +144,7 @@ projectCard.onclick = function displayProjectCard() {
               repoEl.textContent = repoName;
               repoEl.setAttribute("id", repoName);
   
-              repoEl.setAttribute("class", "btn btn-secondary btn-block");
+              repoEl.setAttribute("class", "btn btn-small btn-secondary btn-block");
               repoEl.setAttribute("href", repoUrl);
               repoEl.setAttribute("style", "display: flex");
               repoEl.setAttribute("style", "justify-content: center");
@@ -145,7 +155,7 @@ projectCard.onclick = function displayProjectCard() {
   
             
   
-              projectCardApiEl.appendChild(repoEl).appendChild(addRepoSection).appendChild(addRepoSectionText);
+              projectCardApiEl.appendChild(repoEl).appendChild(addRepoSection).appendChild(addRepoSectionButton);
             }
   
             
