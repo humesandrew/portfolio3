@@ -45,11 +45,11 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
   projectCard.appendChild(projectCardApiEl);
-  
+
 
   var createProjectButton = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton);
-  createProjectButton.textContent = "BellyBuster: the App";
+  createProjectButton.textContent = "Belly-Buster";
   createProjectButton.setAttribute(
     "class",
     "btn btn-secondary btn-lg btn-light"
@@ -57,24 +57,22 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton.setAttribute("id", "projectButton");
   createProjectButton.setAttribute("style", "margin-top: 20px");
   createProjectButton.setAttribute("style", "display: flex");
-  createProjectButton.setAttribute("style", "flex-direction: row");
-  createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: auto");
+  createProjectButton.setAttribute("style", "flex-direction: column");
+  createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: cover");
   createProjectButton.style.fontWeight = "bold";
-    var createGhLink1 = document.createElement("button");
-    createGhLink1.setAttribute(
-      "class",
-      "btn btn-secondary btn-tiny btn-light"
-    );
+  var createGhLink1 = document.createElement("button");
+  createGhLink1.setAttribute(
+    "class",
+    "btn btn-secondary btn-tiny btn-light"
+  );
   createGhLink1.setAttribute("id", "GhLink1");
-
-    createGhLink1.textContent = "Github Repository";
-    createProjectButton.appendChild(createProjectBreak);
-    createProjectButton.appendChild(createGhLink1);
-
-    var clickGhLink1Button = document.getElementById("GhLink1");
-    clickGhLink1Button.onclick = function () {
-      window.open("https://github.com/humesandrew/Belly-Buster");
-    };
+  createGhLink1.textContent = "Github Repository";
+  createProjectButton.appendChild(createProjectBreak);
+  createProjectButton.appendChild(createGhLink1);
+  var clickGhLink1Button = document.getElementById("GhLink1");
+  clickGhLink1Button.onclick = function () {
+    window.open("https://github.com/humesandrew/Belly-Buster");
+  };
 
   var createProjectButton2 = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton2);
@@ -85,10 +83,26 @@ projectCard.onclick = function displayProjectCard() {
   );
   createProjectButton2.setAttribute("id", "projectButton2");
   createProjectButton2.setAttribute("style", "margin-top: 20px");
-  createProjectButton2.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: auto");
+  createProjectButton2.setAttribute("style", "display: flex");
+  createProjectButton2.setAttribute("style", "flex-direction: column");
+  createProjectButton2.setAttribute("style", "background-image: url('chartmd.png')", "background-size: contain");
   createProjectButton2.style.fontWeight = "bold";
-  // createProjectButton.setAttribute("style", "background-size: cover");
   
+  var createGhLink2 = document.createElement("button");
+  createGhLink2.setAttribute(
+    "class",
+    "btn btn-secondary btn-tiny btn-light"
+  );
+  createGhLink2.setAttribute("id", "GhLink2");
+  createGhLink2.textContent = "Github Repository";
+  createProjectButton2.appendChild(createProjectBreak);
+  createProjectButton2.appendChild(createGhLink2);
+  var clickGhLink2Button = document.getElementById("GhLink2");
+  clickGhLink2Button.onclick = function () {
+    window.open("https://github.com/stuartwood2010/chartMd_app");
+  };
+  // createProjectButton.setAttribute("style", "background-size: cover");
+
 
 
 
@@ -106,6 +120,10 @@ projectCard.onclick = function displayProjectCard() {
     window.open("https://humesandrew.github.io/Belly-Buster/");
   };
 
+  var clickProjectButton2 = document.getElementById("projectButton2");
+  clickProjectButton2.onclick = function () {
+    window.open("https://chartmd.herokuapp.com/");
+  };
 
 
 };
