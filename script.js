@@ -56,11 +56,25 @@ projectCard.onclick = function displayProjectCard() {
   );
   createProjectButton.setAttribute("id", "projectButton");
   createProjectButton.setAttribute("style", "margin-top: 20px");
+  createProjectButton.setAttribute("style", "display: flex");
+  createProjectButton.setAttribute("style", "flex-direction: row");
   createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: auto");
   createProjectButton.style.fontWeight = "bold";
+    var createGhLink1 = document.createElement("button");
+    createGhLink1.setAttribute(
+      "class",
+      "btn btn-secondary btn-tiny btn-light"
+    );
+  createGhLink1.setAttribute("id", "GhLink1");
 
+    createGhLink1.textContent = "Github Repository";
+    createProjectButton.appendChild(createProjectBreak);
+    createProjectButton.appendChild(createGhLink1);
 
-
+    var clickGhLink1Button = document.getElementById("GhLink1");
+    clickGhLink1Button.onclick = function () {
+      window.open("https://github.com/humesandrew/Belly-Buster");
+    };
 
   var createProjectButton2 = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton2);
@@ -75,12 +89,18 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton2.style.fontWeight = "bold";
   // createProjectButton.setAttribute("style", "background-size: cover");
   
-  var createProjectButtonLinks = document.createElement("div");
-  createProjectButtonLinks.textContent = "GitHub Url: " + "https://github.com/humesandrew/Belly-Buster";
-              createProjectButtonLinks.setAttribute("style", "font-size: 10px");
 
 
-  createProjectButton.appendChild(createProjectBreak).appendChild(createProjectButtonLinks);
+
+
+
+  // var createProjectButtonLinks = document.createElement("div");
+  // createProjectButtonLinks.textContent = "GitHub Url: " + "https://github.com/humesandrew/Belly-Buster";
+  //             createProjectButtonLinks.setAttribute("style", "font-size: 10px");
+
+
+  // createProjectButton.appendChild(createProjectBreak).appendChild(createProjectButtonLinks);
+
   var clickProjectButton = document.getElementById("projectButton");
   clickProjectButton.onclick = function () {
     window.open("https://humesandrew.github.io/Belly-Buster/");
