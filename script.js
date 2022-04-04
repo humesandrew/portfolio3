@@ -40,7 +40,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.setAttribute("id", "projectCardApiEl");
   projectCardApiEl.setAttribute("class", "card col-10");
   projectCardApiEl.textContent = "";
-  projectCardApiEl.style.backgroundColor = "white";
+  projectCardApiEl.style.backgroundColor = "transparent";
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
@@ -113,7 +113,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.appendChild(createApiCard);
   
   function getRepos() {
-    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=3";
+    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=4";
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
@@ -122,7 +122,7 @@ projectCard.onclick = function displayProjectCard() {
   
             for (var i = 0; i < data.length; i++) {
               var repoName = data[i].name;
-              var repoUrl = "https://humesandrew.github.io/" + data[i].name;
+              var deployedUrl = "https://humesandrew.github.io/" + data[i].name;
            
               var addRepoSectionButton = document.createElement("button");
               addRepoSectionButton.setAttribute(
@@ -139,6 +139,11 @@ projectCard.onclick = function displayProjectCard() {
               );
               createGhApiLink.setAttribute("id", "GhApiLink");
               createGhApiLink.textContent = "Github Repository";
+
+                createGhApiLink.onclick = function() {
+            
+                  window.open(data[i].url)
+                }
          
           
               addRepoSectionButton.appendChild(createProjectBreak);
@@ -152,9 +157,9 @@ projectCard.onclick = function displayProjectCard() {
               repoEl.setAttribute("id", repoName);
   
               repoEl.setAttribute("class", "btn btn-small btn-secondary btn-block");
-              repoEl.setAttribute("href", repoUrl);
+              repoEl.setAttribute("href", deployedUrl);
               repoEl.setAttribute("style", "display: flex");
-              repoEl.setAttribute("style", "justify-content: center");
+              repoEl.setAttribute("style", "justify-content: space-between");
               repoEl.setAttribute("style", "align-items: column");
               repoEl.setAttribute("style", "background-image: url('githubthumb.png')");
               repoEl.style.color = 'black';
