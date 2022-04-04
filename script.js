@@ -63,10 +63,11 @@ projectCard.onclick = function displayProjectCard() {
   var createGhLink1 = document.createElement("button");
   createGhLink1.setAttribute(
     "class",
-    "btn btn-secondary btn-tiny btn-light"
+    "btn btn-outline-secondary btn-sm btn-light col-12"
   );
   createGhLink1.setAttribute("id", "GhLink1");
   createGhLink1.textContent = "Github Repository";
+ 
   createProjectButton.appendChild(createProjectBreak);
   createProjectButton.appendChild(createGhLink1);
   var clickGhLink1Button = document.getElementById("GhLink1");
@@ -91,7 +92,7 @@ projectCard.onclick = function displayProjectCard() {
   var createGhLink2 = document.createElement("button");
   createGhLink2.setAttribute(
     "class",
-    "btn btn-secondary btn-tiny btn-light"
+    "btn btn-outline-secondary btn-sm btn-light col-12"
   );
   createGhLink2.setAttribute("id", "GhLink2");
   createGhLink2.textContent = "Github Repository";
@@ -122,21 +123,27 @@ projectCard.onclick = function displayProjectCard() {
             for (var i = 0; i < data.length; i++) {
               var repoName = data[i].name;
               var repoUrl = "https://humesandrew.github.io/" + data[i].name;
-              var addRepoSection = document.createElement("hr");
+           
               var addRepoSectionButton = document.createElement("button");
+              addRepoSectionButton.setAttribute(
+                "class",
+                "btn btn-secondary btn-lg btn-light"
+              );
+              addRepoSectionButton.setAttribute("style", "display: flex");
+              addRepoSectionButton.setAttribute("style", "flex-direction: column");
+
               var createGhApiLink = document.createElement("button");
               createGhApiLink.setAttribute(
                 "class",
-                "btn btn-secondary btn-tiny btn-light"
+                "btn btn-outline-secondary btn-sm btn-light col-12"
               );
-              createGhApiLink.setAttribute("id", "GhApiLink2");
+              createGhApiLink.setAttribute("id", "GhApiLink");
               createGhApiLink.textContent = "Github Repository";
+         
+          
               addRepoSectionButton.appendChild(createProjectBreak);
               addRepoSectionButton.appendChild(createGhApiLink);
-              var clickGhLink2Button = document.getElementById("GhLink2");
-              clickGhLink2Button.onclick = function () {
-                window.open("https://github.com/stuartwood2010/chartMd_app");
-              };
+         
               
               
   
@@ -155,7 +162,7 @@ projectCard.onclick = function displayProjectCard() {
   
             
   
-              projectCardApiEl.appendChild(repoEl).appendChild(addRepoSection).appendChild(addRepoSectionButton);
+              projectCardApiEl.appendChild(repoEl).appendChild(addRepoSectionButton);
             }
   
             
