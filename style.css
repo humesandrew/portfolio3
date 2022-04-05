@@ -8,14 +8,16 @@
 } */
 
 .bioCard {
-    background-image: url("Andy_1.jpg");
+    /* background-image: url("Andy_1.jpg"); */
+    /* background-size: cover; */
     opacity: 70%;
-    background-size: cover;
+   background-color: black;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: white;
 font-size: 40px;
+text-align: center;
 
 }
 
@@ -23,6 +25,21 @@ font-size: 40px;
     opacity: 1;
     /* font-size: 60px; */
 }
+
+.andyPic {
+    display: flex;
+    max-height: 175px;
+    border-radius: 175px;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
 
 .projectCard {
     background-image: url("eyeball.png");
@@ -41,21 +58,36 @@ font-size: 40px;
 }
 
 .contactCard {
-    background-image: url("FFB.png");
-    opacity: 70%;
+    /* background-image: url("FFB.png"); */
+    /* opacity: 70%; */
     background-size: cover;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: white;
 font-size: 35px;
 text-align: center;
+margin-top: 10px;
 }
-
+/* 
 .contactCard:hover { 
     opacity: 1;
-    /* font-size: 50px; */
-}
+    font-size: 50px; */
+/* } */
+
+.contactButtons {
+    display: inline-flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+    
+
+
+
+
+
+
+
 
 
 @media (max-width: 500px) {
