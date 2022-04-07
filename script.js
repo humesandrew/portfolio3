@@ -199,35 +199,6 @@ projectCard.onclick = function displayProjectCard() {
 
 };
 
-///creating the contact card on click////////
 
-const contactCard = document.getElementById("card3");
-const contacts = ["Email", "Resume", "LinkedIn"];
 
-contactCard.onclick = function displayContactCard() {
-  contactCard.textContent = "";
-  var createList = document.createElement("ul");
-  for (var i = 0; i < contacts.length; i++) {
-    var createListItem = document.createElement("button");
-    createListItem.textContent = contacts[i];
-    createListItem.setAttribute("class", "btn btn-secondary btn-lg btn-light");
-    contactCard.appendChild(createListItem);
-    contactCard.style.justifyContent = "space-around";
-    createListItem.setAttribute("id", contacts[i]);
-  }
 
-  var clickEmail = document.getElementById("Email");
-  clickEmail.onclick = function () {
-    window.location.href = "mailto:humes.andrew@gmail.com";
-  };
-
-  var clickResume = document.getElementById("Resume");
-  clickResume.onclick = function () {
-    window.open("Andy_Humes_Resume.pdf");
-  };
-
-  var clickLinkedIn = document.getElementById("LinkedIn");
-  clickLinkedIn.onclick = function () {
-    window.open("https://www.linkedin.com/in/andrew-humes-72075559/");
-  };
-};
