@@ -75,11 +75,10 @@ margin-top: 10px;
     font-size: 50px; */
 /* } */
 
-.contactButtons {
-    display: inline-flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+.contactBtn {
+    width: 200px;
+    height: 40px;
+}
     
 
 
