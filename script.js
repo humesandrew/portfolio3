@@ -47,7 +47,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.backgroundColor = "transparent";
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
-  projectCardApiEl.style.justifyContent = "space-around"
+  projectCardApiEl.style.justifyContent = "space-between"
   
   projectCard.appendChild(projectCardApiEl);
 
