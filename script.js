@@ -127,7 +127,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.appendChild(createApiCard);
   
   function getRepos() {
-    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=7";
+    var apiUrl = "https://api.github.com/users/humesandrew/repos";
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
