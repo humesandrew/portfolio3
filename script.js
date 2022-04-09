@@ -44,6 +44,8 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
+  projectCardApiEl.setAttribute("style", "height: 100vh");
+  projectCardApiEl.setAttribute("style", "overflow-y: scroll");
   projectCard.appendChild(projectCardApiEl);
 
 
@@ -107,13 +109,19 @@ projectCard.onclick = function displayProjectCard() {
 
 
   var createApiCard = document.createElement("div");
-  createApiCard.textContent = "";
+ 
   createApiCard.setAttribute("id", "apiCard");
   createApiCard.setAttribute("style", "margin-top: 30px;");
+  projectCardApiEl.style.display = "flex";
+  projectCardApiEl.style.flexDirection = "column"
+  projectCardApiEl.style.justifyContent = "space-around"
+  projectCardApiEl.setAttribute("style", "height: 100vh");
+  projectCardApiEl.setAttribute("style", "overflow-y: scroll");
+
   projectCardApiEl.appendChild(createApiCard);
   
   function getRepos() {
-    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=4";
+    var apiUrl = "https://api.github.com/users/humesandrew/repos?per_page=7";
     fetch(apiUrl)
       .then(function (response) {
         if (response.ok) {
