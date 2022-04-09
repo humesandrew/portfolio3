@@ -34,11 +34,15 @@ projectCard.onclick = function displayProjectCard() {
   var projectText = document.getElementById("projectCardEl");
   projectCardEl.textContent = "Projects";
 
+  projectCardEl.setAttribute("style", "margin: auto");
+
   projectCard.appendChild(projectCardEl);
 
   var projectCardApiEl = document.createElement("card");
   projectCardApiEl.setAttribute("id", "projectCardApiEl");
   projectCardApiEl.setAttribute("class", "card col-10");
+  projectCardApiEl.setAttribute("style", "width: 100%");
+
   projectCardApiEl.textContent = "";
   projectCardApiEl.style.backgroundColor = "transparent";
   projectCardApiEl.style.display = "flex";
@@ -61,6 +65,7 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton.setAttribute("style", "flex-direction: column");
   createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: cover");
   createProjectButton.style.fontWeight = "bold";
+  // createProjectButton.setAttribute("style", "z-index: 1");
   var createGhLink1 = document.createElement("button");
   createGhLink1.setAttribute(
     "class",
@@ -116,8 +121,8 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
-  projectCardApiEl.setAttribute("style", "height: 100vh");
-  projectCardApiEl.setAttribute("style", "overflow-y: scroll");
+  projectCardApiEl.setAttribute("style", "height: 75vh");
+  // projectCardApiEl.setAttribute("style", "overflow-y: scroll");
 
   projectCardApiEl.appendChild(createApiCard);
   
