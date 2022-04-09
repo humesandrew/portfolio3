@@ -44,8 +44,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
-  projectCardApiEl.setAttribute("style", "height: 100vh");
-  projectCardApiEl.setAttribute("style", "overflow-y: scroll");
+  
   projectCard.appendChild(projectCardApiEl);
 
 
@@ -112,6 +111,8 @@ projectCard.onclick = function displayProjectCard() {
  
   createApiCard.setAttribute("id", "apiCard");
   createApiCard.setAttribute("style", "margin-top: 30px;");
+  createApiCard.setAttribute("style", "height: 100vh");
+  createApiCard.setAttribute("style", "overflow-y: scroll");
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
@@ -175,7 +176,7 @@ projectCard.onclick = function displayProjectCard() {
   
             
   
-              projectCardApiEl.appendChild(repoEl).appendChild(addRepoSectionButton);
+              projectCardApiEl.appendChild(createApiCard).appendChild(repoEl).appendChild(addRepoSectionButton);
             }
   
             
