@@ -48,7 +48,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-between"
-  
+
   projectCard.appendChild(projectCardApiEl);
 
 
@@ -73,7 +73,7 @@ projectCard.onclick = function displayProjectCard() {
   );
   createGhLink1.setAttribute("id", "GhLink1");
   createGhLink1.textContent = "Github Repository";
- 
+
   createProjectButton.appendChild(createProjectBreak);
   createProjectButton.appendChild(createGhLink1);
   var clickGhLink1Button = document.getElementById("GhLink1");
@@ -94,7 +94,7 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton2.setAttribute("style", "flex-direction: column");
   createProjectButton2.setAttribute("style", "background-image: url('chartmd.png')", "background-size: contain");
   createProjectButton2.style.fontWeight = "bold";
-  
+
   var createGhLink2 = document.createElement("button");
   createGhLink2.setAttribute(
     "class",
@@ -113,10 +113,11 @@ projectCard.onclick = function displayProjectCard() {
 
 
   var createApiCard = document.createElement("div");
- 
+
   createApiCard.setAttribute("id", "apiCard");
   createApiCard.setAttribute("style", "margin-top: 30px;");
   createApiCard.setAttribute("style", "height: 100vh");
+  createApiCard.setAttribute("style", "background-color: transparent");
   createApiCard.setAttribute("style", "overflow-y: scroll");
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
@@ -125,7 +126,7 @@ projectCard.onclick = function displayProjectCard() {
   // projectCardApiEl.setAttribute("style", "overflow-y: scroll");
 
   projectCardApiEl.appendChild(createApiCard);
-  
+
   function getRepos() {
     var apiUrl = "https://api.github.com/users/humesandrew/repos";
     fetch(apiUrl)
@@ -133,11 +134,11 @@ projectCard.onclick = function displayProjectCard() {
         if (response.ok) {
           response.json().then(function (data) {
             console.log(data);
-  
+
             for (var i = 0; i < data.length; i++) {
               var repoName = data[i].name;
               var deployedUrl = "https://humesandrew.github.io/" + data[i].name;
-           
+
               var addRepoSectionButton = document.createElement("button");
               addRepoSectionButton.setAttribute(
                 "class",
@@ -146,6 +147,11 @@ projectCard.onclick = function displayProjectCard() {
               addRepoSectionButton.setAttribute("style", "display: flex");
               addRepoSectionButton.setAttribute("style", "flex-direction: column");
 
+              addRepoSectionButton.onclick = function () {
+
+                window.open(deployedUrl)
+              }
+
               var createGhApiLink = document.createElement("button");
               createGhApiLink.setAttribute(
                 "class",
@@ -153,23 +159,23 @@ projectCard.onclick = function displayProjectCard() {
               );
               createGhApiLink.setAttribute("id", "GhApiLink");
               createGhApiLink.textContent = "Github Repository";
+                const githubUrl = "https://github.com/humesandrew/" + data[i].name;
+              createGhApiLink.onclick = function () {
 
-                createGhApiLink.onclick = function() {
-            
-                  window.open(data[i].url)
-                }
-         
-          
+                window.open(githubUrl)
+              }
+
+
               addRepoSectionButton.appendChild(createProjectBreak);
               addRepoSectionButton.appendChild(createGhApiLink);
-         
-              
-              
-  
+
+
+
+
               var repoEl = document.createElement("a");
               repoEl.textContent = repoName;
               repoEl.setAttribute("id", repoName);
-  
+
               repoEl.setAttribute("class", "btn btn-small btn-secondary btn-block");
               repoEl.setAttribute("href", deployedUrl);
               repoEl.setAttribute("style", "display: flex");
@@ -178,13 +184,13 @@ projectCard.onclick = function displayProjectCard() {
               repoEl.setAttribute("style", "background-image: url('githubthumb.png')");
               repoEl.style.color = 'black';
               repoEl.style.fontWeight = 'bold';
-  
-            
-  
+
+
+
               projectCardApiEl.appendChild(createApiCard).appendChild(repoEl).appendChild(addRepoSectionButton);
             }
-  
-            
+
+
           });
         } else {
           alert("Error: " + response.statusText);
@@ -194,7 +200,7 @@ projectCard.onclick = function displayProjectCard() {
         alert("Unable to connect to GitHub");
       });
   }
-  
+
   getRepos();
 
 
@@ -212,7 +218,3 @@ projectCard.onclick = function displayProjectCard() {
 
 
 };
-
-
-
-
