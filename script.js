@@ -27,8 +27,10 @@ const createProjectBreak = document.createElement("hr");
 
 projectCard.onclick = function displayProjectCard() {
   projectCard.textContent = "";
+ 
   var projectCardEl = document.createElement("card");
   projectCardEl.setAttribute("id", "projectCardEl");
+ 
 
   projectCardEl.setAttribute("class", "card-header");
   var projectText = document.getElementById("projectCardEl");
@@ -42,9 +44,10 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.setAttribute("id", "projectCardApiEl");
   projectCardApiEl.setAttribute("class", "card col-10");
   projectCardApiEl.setAttribute("style", "width: 100%");
+  
 
   projectCardApiEl.textContent = "";
-  projectCardApiEl.style.backgroundColor = "transparent";
+
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-between"
@@ -54,6 +57,7 @@ projectCard.onclick = function displayProjectCard() {
 
   var createProjectButton = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton);
+  projectCard.style.backgroundColor = "transparent";
   createProjectButton.textContent = "Belly-Buster";
   createProjectButton.setAttribute(
     "class",
@@ -63,8 +67,11 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton.setAttribute("style", "margin-top: 20px");
   createProjectButton.setAttribute("style", "display: flex");
   createProjectButton.setAttribute("style", "flex-direction: column");
-  createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: cover");
+  createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: cover", "background-repeat: no-repeat");
   createProjectButton.style.fontWeight = "bold";
+  createProjectButton.style.fontSize = "25px";
+  createProjectButton.style.marginBottom = "10px";
+  
   // createProjectButton.setAttribute("style", "z-index: 1");
   var createGhLink1 = document.createElement("button");
   createGhLink1.setAttribute(
@@ -94,6 +101,8 @@ projectCard.onclick = function displayProjectCard() {
   createProjectButton2.setAttribute("style", "flex-direction: column");
   createProjectButton2.setAttribute("style", "background-image: url('chartmd.png')", "background-size: contain");
   createProjectButton2.style.fontWeight = "bold";
+  createProjectButton2.style.fontSize = "25px";
+  createProjectButton2.style.marginBottom = "10px";
 
   var createGhLink2 = document.createElement("button");
   createGhLink2.setAttribute(
