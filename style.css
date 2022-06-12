@@ -141,3 +141,12 @@ flex-wrap: wrap;
 .createProjectButton2 {
     margin-bottom: 500px;
 }
+
+#projectCardApiEl {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.projectCardEl {
+    background-color: transparent;
+}

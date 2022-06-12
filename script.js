@@ -55,6 +55,41 @@ projectCard.onclick = function displayProjectCard() {
   projectCard.appendChild(projectCardApiEl);
 
 
+  var createProjectButton3 = document.createElement("button");
+  projectCardApiEl.appendChild(createProjectButton3);
+  createProjectButton3.textContent = "Java4Javascripters";
+  createProjectButton3.setAttribute(
+    "class",
+    "btn btn-secondary btn-lg btn-light"
+  );
+  createProjectButton3.setAttribute("id", "projectButton3");
+  createProjectButton3.setAttribute("style", "margin-top: 30px");
+  createProjectButton3.setAttribute("style", "display: flex");
+  createProjectButton3.setAttribute("style", "flex-direction: column");
+  createProjectButton3.setAttribute("style", "background-image: url('j4j.png')", "background-size: contain");
+  createProjectButton3.style.fontWeight = "bold";
+  createProjectButton3.style.fontSize = "25px";
+  createProjectButton3.style.color = "white";
+  
+  createProjectButton3.style.marginBottom = "10px";
+
+  var createGhLink3 = document.createElement("button");
+  createGhLink3.setAttribute(
+    "class",
+    "btn btn-outline-secondary btn-sm btn-light col-12"
+  );
+  createGhLink3.setAttribute("id", "GhLink3");
+  createGhLink3.textContent = "Github Repository";
+  createProjectButton3.appendChild(createProjectBreak);
+  createProjectButton3.appendChild(createGhLink3);
+  var clickGhLink3Button = document.getElementById("GhLink3");
+  clickGhLink3Button.onclick = function () {
+    window.open("https://github.com/stuartwood2010/chartMd_app");
+  };
+
+
+
+
   var createProjectButton = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton);
   projectCard.style.backgroundColor = "transparent";
@@ -119,7 +154,7 @@ projectCard.onclick = function displayProjectCard() {
   };
   // createProjectButton.setAttribute("style", "background-size: cover");
 
-
+  
 
   var createApiCard = document.createElement("div");
 
