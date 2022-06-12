@@ -163,6 +163,7 @@ projectCard.onclick = function displayProjectCard() {
   createApiCard.setAttribute("style", "height: 100vh");
   createApiCard.setAttribute("style", "background-color: transparent");
   createApiCard.setAttribute("style", "overflow-y: scroll");
+
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column"
   projectCardApiEl.style.justifyContent = "space-around"
