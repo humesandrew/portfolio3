@@ -174,16 +174,24 @@ flex-wrap: wrap;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
   }
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
+    background-image: linear-gradient(to left, #d7dbfb, #baa1f5);
     color: black;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 10% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+
+  .modal-header {
+    font-weight: bold;
+    background-image: linear-gradient(to left, #b2290e, #dfa93d);
   }
   
   /* The Close Button */
@@ -203,11 +211,16 @@ flex-wrap: wrap;
   
 
   li {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .modal-body {
     padding: 2px 16px;
     text-align: left;
-    margin: 10px;
+    margin: 20px;
+  }
+
+  @keyframes animatetop {
+    from {right: -300px; opacity: 0}
+    to {right: 0; opacity: 1}
   }
