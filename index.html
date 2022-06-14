@@ -19,9 +19,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Andy Humes - Portfolio </title>
+    <title>Andy Humes - Portfolio</title>
   </head>
-<!-- 
+  <!-- 
   <ul class="nav nav-tabs">
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#"><h3>Andy Humes</h3></a>
@@ -32,18 +32,16 @@
     
   </ul> -->
 
-
   <div class="container">
     <div class="row">
-      <div class="col-3 card vh-100 bioCard" id= "card1" data-state= "unclicked">
-        <img src="Andy_1.jpg" class="andyPic">
-       
-      <h3>Andy Humes</h3>
-        <h6> Junior level coder. Living in Denver, CO. </h6>
+      <div class="col-3 card vh-100 bioCard" id="card1" data-state="unclicked">
+        <img src="Andy_1.jpg" class="andyPic" />
 
-
+        <h3>Andy Humes</h3>
+        <div id="bioText">
+        Junior level software delevoper. Perpetual learner. Open to work. Living in Denver, CO.
+</div>
         <div class="card contactCard">
-          
           <!-- <h5>
          Education:
           Trilogy Full-Stack Coding Bootcamp - Denver University 2022
@@ -53,44 +51,72 @@
         </h5> -->
 
           <div class="list-group listContainer">
-          
-            <a href="https://github.com/humesandrew/" class="btn btn-outline-secondary btn-block btn-light contactBtn" target="_blank" rel="noopener noreferrer"><h6>Github</h6></a>
-            <a href="https://www.linkedin.com/in/andy-humes-72075559/" class="btn btn-outline-secondary btn-block btn-light contactBtn" target="_blank" rel="noopener noreferrer"><h6>Linkedin</h6></a>
-            <a href= "mailto:humes.andrew@gmail.com" class="btn btn-outline-secondary btn-block btn-light contactBtn"><h6>Email</h6></a>
-            <a href="Andy_Humes_Resume.pdf" class="btn btn-outline-secondary btn-block btn-light contactBtn" target="_blank" rel="noopener noreferrer"><h6>Resume</h6></a>
-           
-           
-           
-       <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+            <a
+              href="https://github.com/humesandrew/"
+              class="btn btn-outline-secondary btn-block btn-light contactBtn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Github</h6></a
+            >
+            <a
+              href="https://www.linkedin.com/in/andy-humes-72075559/"
+              class="btn btn-outline-secondary btn-block btn-light contactBtn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Linkedin</h6></a
+            >
+            <a
+              href="mailto:humes.andrew@gmail.com"
+              class="btn btn-outline-secondary btn-block btn-light contactBtn"
+              ><h6>Email</h6></a
+            >
+            <a
+              href="Andy_Humes_Resume.pdf"
+              class="btn btn-outline-secondary btn-block btn-light contactBtn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><h6>Resume</h6></a
+            >
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
+            <!-- Trigger/Open The Modal -->
+            <div
+              id="myBtn"
+              class="btn btn-outline-secondary btn-block btn-light contactBtn"
+            >
+              Education
+            </div>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-      <h1>Education</h1>
-      <span class="close">&times;</span>
-    </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+              <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1>Education</h1>
+                  <span class="close">&times;</span>
+                </div>
 
-    <div class="modal-body">
-    <li>University of Denver - Full Stack Coding Bootcamp. April, 2022.</li>
-    <li>Colorado State University - Master of Biomedical Science. 2013</li>
-     <li>The Ohio State University - Bachelor of Science: Molecular Biology. 2008</li>
-    <li>The Ohio State University - Bachelor of Arts: Anthroplogy. 2008</li>
-    </div>
-  </div>
+                <div class="modal-body">
+                  <li>
+                    University of Denver - Full Stack Coding Bootcamp. April,
+                    2022.
+                  </li>
+                  <li>
+                    Colorado State University - Master of Biomedical Science.
+                    2013
+                  </li>
+                  <li>
+                    The Ohio State University - Bachelor of Science: Molecular
+                    Biology. 2008
+                  </li>
+                  <li>
+                    The Ohio State University - Bachelor of Arts: Anthroplogy.
+                    2008
+                  </li>
+                </div>
+              </div>
+            </div>
 
-</div>
-           
-           
-           
-           
-           
-           
-           
-           
+            <!--            
             <div class="btn btn-outline-secondary btn-block btn-light contactBtn" id="educationBtn">
               <h6>Education</h6>
               
@@ -100,22 +126,16 @@
             <li>The Ohio State University - Bachelor's of Science: Molecular Biology. 2008</li>
            <li>The Ohio State University - Bachelor's of Arts: Anthroplogy. 2008</li>
           </div>
-            </div>   
-            
-            
-
- 
+            </div>    -->
           </div>
-
-        </div> 
-
-
-
-
-
+        </div>
       </div>
-      <div class="col-9 card vh-100 projectCard" id= "card2" data-state= "unclicked">
-        Projects
+      <div
+        class="col-9 card vh-100 projectCard"
+        id="card2"
+        data-state="unclicked"
+      >
+        Click to view projects
       </div>
       <!-- <div class="col card contactCard" id= "card3" data-state= "unclicked">
         Contact Info
@@ -123,7 +143,5 @@
     </div>
   </div>
 
-
-
   <script src="script.js"></script>
- 
+</html>
