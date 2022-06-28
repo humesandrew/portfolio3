@@ -262,6 +262,10 @@ projectCard.onclick = function displayProjectCard() {
   };
 
 
+  var clickProjectButton3 = document.getElementById("projectButton3");
+  clickProjectButton3.onclick = function () {
+    window.open("https://java4jsrs.herokuapp.com/");
+  };
 };
 
 
