@@ -17,7 +17,7 @@
 .bioCard {
     /* background-image: url("Andy_1.jpg"); */
     /* background-size: cover; */
-    opacity: 90%;
+   
    background-image: linear-gradient(to right, #b2290e, #dfa93d);
     display: flex;
     align-items: center;
@@ -30,10 +30,6 @@ max-height: 100%;
 
 }
 
-.bioCard:hover { 
-    opacity: 1;
-    /* font-size: 60px; */
-}
 
 .andyPic {
     display: flex;
@@ -83,7 +79,7 @@ max-height: 100%;
 
 .projectCard {
     background-image: url("eyeball.png");
-    opacity: 90%;
+   
     background-size: cover;
     display: flex;
     align-items: center;
@@ -92,10 +88,7 @@ max-height: 100%;
 font-size: 40px
 }
 
-.projectCard:hover { 
-    opacity: 1;
-    /* font-size: 60px; */
-}
+
 
 .contactCard {
     /* background-image: url("FFB.png"); */
