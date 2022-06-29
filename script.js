@@ -114,6 +114,12 @@ createProjectButton3.appendChild(createP1Deploy);
     "class",
     "btn btn-secondary btn-lg btn-light"
   );
+  
+  var addPContent = document.createElement("h3");
+  addPContent.textContent = "An application to find breweries in your area, developed with Javascript and HTML/CSS.";
+  addPContent.style.fontSize = "15px";
+  createProjectButton.appendChild(addPContent);
+
   createProjectButton.setAttribute("id", "projectButton");
   createProjectButton.setAttribute("style", "margin-top: 20px");
   createProjectButton.setAttribute("style", "display: flex");
@@ -123,6 +129,17 @@ createProjectButton3.appendChild(createP1Deploy);
   createProjectButton.style.fontSize = "25px";
   createProjectButton.style.marginBottom = "10px";
   
+  var p2BtnDiv = document.createElement("div");
+  createProjectButton.appendChild(p2BtnDiv);
+ var createP2Deploy = document.createElement("button");
+ createP2Deploy.setAttribute(
+  "class",
+  "btn btn-outline-secondary btn-sm btn-light col-12"
+);
+createP2Deploy.textContent = "Deployed application";
+createP2Deploy.style.height = "30px";
+createProjectButton.appendChild(createP2Deploy);
+createP2Deploy.setAttribute("id","P2Deploy");
   // createProjectButton.setAttribute("style", "z-index: 1");
   var createGhLink1 = document.createElement("button");
   createGhLink1.setAttribute(
@@ -154,7 +171,25 @@ createProjectButton3.appendChild(createP1Deploy);
   createProjectButton2.style.fontWeight = "bold";
   createProjectButton2.style.fontSize = "25px";
   createProjectButton2.style.marginBottom = "10px";
-
+  var addP2Content = document.createElement("h3");
+  addP2Content.textContent = "An application to manage your virtual doctor's office, using XXXX";
+  addP2Content.style.fontSize = "15px";
+  createProjectButton2.appendChild(addP2Content);
+  createProjectButton2.setAttribute(
+    "class",
+    "btn btn-secondary btn-lg btn-light"
+  );
+  var p3BtnDiv = document.createElement("div");
+  createProjectButton2.appendChild(p3BtnDiv);
+ var createP3Deploy = document.createElement("button");
+ createP3Deploy.setAttribute(
+  "class",
+  "btn btn-outline-secondary btn-sm btn-light col-12"
+);
+createP3Deploy.textContent = "Deployed application";
+createP3Deploy.style.height = "30px";
+createProjectButton2.appendChild(createP3Deploy);
+createP3Deploy.setAttribute("id","P3Deploy");
   var createGhLink2 = document.createElement("button");
   createGhLink2.setAttribute(
     "class",
@@ -267,12 +302,12 @@ createProjectButton3.appendChild(createP1Deploy);
 
 
 
-  var clickProjectButton = document.getElementById("projectButton");
+  var clickProjectButton = document.getElementById("P2Deploy");
   clickProjectButton.onclick = function () {
     window.open("https://humesandrew.github.io/Belly-Buster/");
   };
 
-  var clickProjectButton2 = document.getElementById("projectButton2");
+  var clickProjectButton2 = document.getElementById("P3Deploy");
   clickProjectButton2.onclick = function () {
     window.open("https://chartmd.herokuapp.com/");
   };
