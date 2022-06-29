@@ -36,7 +36,7 @@ projectCard.onclick = function displayProjectCard() {
   var projectText = document.getElementById("projectCardEl");
   projectCardEl.textContent = "Projects";
 
-  projectCardEl.setAttribute("style", "margin: auto");
+  projectCardEl.setAttribute("style", "margin: 0px");
 
   projectCard.appendChild(projectCardEl);
 
@@ -49,8 +49,8 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.textContent = "";
 
   projectCardApiEl.style.display = "flex";
-  projectCardApiEl.style.flexDirection = "column"
-  projectCardApiEl.style.justifyContent = "space-between"
+  projectCardApiEl.style.flexDirection = "column";
+  projectCardApiEl.style.justifyContent = "space-around";
 
   projectCard.appendChild(projectCardApiEl);
 
@@ -58,17 +58,19 @@ projectCard.onclick = function displayProjectCard() {
   var createProjectButton3 = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton3);
   createProjectButton3.textContent = "Java4Javascripters";
-  var addP1Content = document.createElement("div");
-  addP1Content.textContent = "A virtual coffee store, using MongoDB, Express, React, and Node.";
+  var addP1Content = document.createElement("h3");
+  addP1Content.textContent = "A virtual coffee store, developed using MongoDB, Express, React, and Node.";
+  addP1Content.style.fontSize = "15px";
   createProjectButton3.appendChild(addP1Content);
   createProjectButton3.setAttribute(
     "class",
     "btn btn-secondary btn-lg btn-light"
   );
   createProjectButton3.setAttribute("id", "projectButton3");
-  createProjectButton3.setAttribute("style", "margin-top: 30px");
+  createProjectButton3.setAttribute("style", "padding: 10px");
   createProjectButton3.setAttribute("style", "display: flex");
-  createProjectButton3.setAttribute("style", "flex-direction: column");
+  // createProjectButton3.setAttribute("style", "flex-direction: row");
+  createProjectButton3.style.flexDirection = "column";
   createProjectButton3.setAttribute("style", "background-image: url('j4j.png')", "background-size: contain");
   createProjectButton3.style.fontWeight = "bold";
   createProjectButton3.style.fontSize = "25px";
@@ -76,13 +78,24 @@ projectCard.onclick = function displayProjectCard() {
   
   createProjectButton3.style.marginBottom = "10px";
 
+  var p1BtnDiv = document.createElement("div");
+  createProjectButton3.appendChild(p1BtnDiv);
+ var createP1Deploy = document.createElement("button");
+ createP1Deploy.setAttribute(
+  "class",
+  "btn btn-outline-secondary btn-sm btn-light col-12"
+);
+createP1Deploy.textContent = "Deployed application";
+createP1Deploy.style.height = "30px";
+createProjectButton3.appendChild(createP1Deploy);
   var createGhLink3 = document.createElement("button");
   createGhLink3.setAttribute(
     "class",
     "btn btn-outline-secondary btn-sm btn-light col-12"
   );
+  createP1Deploy.setAttribute("id","P1Deploy");
   createGhLink3.setAttribute("id", "GhLink3");
-  createGhLink3.textContent = "Github Repository";
+  createGhLink3.textContent = "Github repository";
   createProjectButton3.appendChild(createProjectBreak);
   createProjectButton3.appendChild(createGhLink3);
   var clickGhLink3Button = document.getElementById("GhLink3");
@@ -265,7 +278,7 @@ projectCard.onclick = function displayProjectCard() {
   };
 
 
-  var clickProjectButton3 = document.getElementById("projectButton3");
+  var clickProjectButton3 = document.getElementById("P1Deploy");
   clickProjectButton3.onclick = function () {
     window.open("https://java4jsrs.herokuapp.com/");
   };
