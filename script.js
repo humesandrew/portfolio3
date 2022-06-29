@@ -58,6 +58,9 @@ projectCard.onclick = function displayProjectCard() {
   var createProjectButton3 = document.createElement("button");
   projectCardApiEl.appendChild(createProjectButton3);
   createProjectButton3.textContent = "Java4Javascripters";
+  var addP1Content = document.createElement("div");
+  addP1Content.textContent = "A virtual coffee store, using MongoDB, Express, React, and Node.";
+  createProjectButton3.appendChild(addP1Content);
   createProjectButton3.setAttribute(
     "class",
     "btn btn-secondary btn-lg btn-light"
