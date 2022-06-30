@@ -1,65 +1,40 @@
-// creating the biocard on click //////////////////////////////////
-
-// const bioCard = document.getElementById("card1");
-// bioCard.onclick = function displayBioCard() {
-//   //   bioCard.style.backgroundImage = "none";
-//   bioCard.style.color = "white";
-//   bioCard.style.fontSize = "30px";
-//   bioCard.textContent =
-//     "I am an aspiring coder. On this page, you will see some examples of my work, my resume, and contact info. I am also part of the leadership for the Colorado chapter of the Foundation Fighting Blindness.";
-//   bioCard.setAttribute("data-state", "clicked");
-//   bioCard.style.textAlign = "center";
-//   var section = document.createElement("hr");
-//   bioCard.appendChild(section);
-
-//   var para = document.createElement("p");
-//   var node = document.createTextNode(
-//     "If you are looking to connect with the Foundation, please see my contact section."
-//   );
-//   para.appendChild(node);
-//   bioCard.appendChild(para);
-// };
-
-/// creating the portfolio card on click///
-
 const projectCard = document.getElementById("card2");
 const createProjectBreak = document.createElement("hr");
 
 projectCard.onclick = function displayProjectCard() {
   projectCard.textContent = "";
- 
+
   var projectCardEl = document.createElement("card");
   projectCardEl.setAttribute("id", "projectCardEl");
- 
 
-  projectCardEl.setAttribute("class", "card-header");
-  var projectText = document.getElementById("projectCardEl");
-  projectCardEl.textContent = "Projects";
+  // projectCardEl.setAttribute("class", "card-header");
+  
+  // projectCardEl.textContent = "Projects";
+  
 
-  projectCardEl.setAttribute("style", "margin: 0px");
+  // projectCardEl.setAttribute("style", "margin: 0px");
 
   projectCard.appendChild(projectCardEl);
 
   var projectCardApiEl = document.createElement("card");
   projectCardApiEl.setAttribute("id", "projectCardApiEl");
-  projectCardApiEl.setAttribute("class", "card col-10");
-  projectCardApiEl.setAttribute("style", "width: 100%");
-  
+  projectCardApiEl.setAttribute("class", "card col-11");
+  // projectCardApiEl.setAttribute("style", "width: 100px");
 
-  projectCardApiEl.textContent = "";
+  // projectCardApiEl.textContent = "";
 
   projectCardApiEl.style.display = "flex";
-  projectCardApiEl.style.flexDirection = "column";
-  projectCardApiEl.style.justifyContent = "space-around";
+  // projectCardApiEl.style.flexDirection = "column";
+  // projectCardApiEl.style.justifyContent = "space-evenly";
 
   projectCard.appendChild(projectCardApiEl);
 
-
-  var createProjectButton3 = document.createElement("button");
+  var createProjectButton3 = document.createElement("div");
   projectCardApiEl.appendChild(createProjectButton3);
   createProjectButton3.textContent = "Java4Javascripters";
   var addP1Content = document.createElement("h3");
-  addP1Content.textContent = "A virtual coffee store, developed using MongoDB, Express, React, and Node.";
+  addP1Content.textContent =
+    "A virtual coffee store, developed using MongoDB, Express, React, and Node.";
   addP1Content.style.fontSize = "15px";
   createProjectButton3.appendChild(addP1Content);
   createProjectButton3.setAttribute(
@@ -67,33 +42,37 @@ projectCard.onclick = function displayProjectCard() {
     "btn btn-secondary btn-lg btn-light"
   );
   createProjectButton3.setAttribute("id", "projectButton3");
-  createProjectButton3.setAttribute("style", "padding: 10px");
+  // createProjectButton3.setAttribute("style", "margin-top: -10px");
   createProjectButton3.setAttribute("style", "display: flex");
   // createProjectButton3.setAttribute("style", "flex-direction: row");
   createProjectButton3.style.flexDirection = "column";
-  createProjectButton3.setAttribute("style", "background-image: url('j4j.png')", "background-size: contain");
+  createProjectButton3.setAttribute(
+    "style",
+    "background-image: url('j4j.png')",
+    "background-size: contain"
+  );
   createProjectButton3.style.fontWeight = "bold";
-  createProjectButton3.style.fontSize = "25px";
+  createProjectButton3.style.fontSize = "22px";
   createProjectButton3.style.color = "white";
-  
-  createProjectButton3.style.marginBottom = "10px";
+
+  createProjectButton3.style.marginBottom = "8px";
 
   var p1BtnDiv = document.createElement("div");
   createProjectButton3.appendChild(p1BtnDiv);
- var createP1Deploy = document.createElement("button");
- createP1Deploy.setAttribute(
-  "class",
-  "btn btn-outline-secondary btn-sm btn-light col-12"
-);
-createP1Deploy.textContent = "Deployed application";
-createP1Deploy.style.height = "30px";
-createProjectButton3.appendChild(createP1Deploy);
+  var createP1Deploy = document.createElement("button");
+  createP1Deploy.setAttribute(
+    "class",
+    "btn btn-outline-secondary btn-sm btn-light col-12"
+  );
+  createP1Deploy.textContent = "Deployed application";
+  createP1Deploy.style.height = "30px";
+  createProjectButton3.appendChild(createP1Deploy);
   var createGhLink3 = document.createElement("button");
   createGhLink3.setAttribute(
     "class",
     "btn btn-outline-secondary btn-sm btn-light col-12"
   );
-  createP1Deploy.setAttribute("id","P1Deploy");
+  createP1Deploy.setAttribute("id", "P1Deploy");
   createGhLink3.setAttribute("id", "GhLink3");
   createGhLink3.textContent = "Github repository";
   createProjectButton3.appendChild(createProjectBreak);
@@ -103,10 +82,7 @@ createProjectButton3.appendChild(createP1Deploy);
     window.open("https://github.com/stuartwood2010/chartMd_app");
   };
 
-
-
-
-  var createProjectButton = document.createElement("button");
+  var createProjectButton = document.createElement("div");
   projectCardApiEl.appendChild(createProjectButton);
   projectCard.style.backgroundColor = "transparent";
   createProjectButton.textContent = "Belly-Buster";
@@ -114,32 +90,38 @@ createProjectButton3.appendChild(createP1Deploy);
     "class",
     "btn btn-secondary btn-lg btn-light"
   );
-  
+
   var addPContent = document.createElement("h3");
-  addPContent.textContent = "An application to find breweries in your area, developed with Javascript and HTML/CSS.";
+  addPContent.textContent =
+    "An application to find breweries in your area, developed with Javascript and HTML/CSS.";
   addPContent.style.fontSize = "15px";
   createProjectButton.appendChild(addPContent);
 
   createProjectButton.setAttribute("id", "projectButton");
-  createProjectButton.setAttribute("style", "margin-top: 20px");
+  
   createProjectButton.setAttribute("style", "display: flex");
   createProjectButton.setAttribute("style", "flex-direction: column");
-  createProjectButton.setAttribute("style", "background-image: url('bellybusterthumb.png')", "background-size: cover", "background-repeat: no-repeat");
+  createProjectButton.setAttribute(
+    "style",
+    "background-image: url('bellybusterthumb.png')",
+    "background-size: cover",
+    "background-repeat: no-repeat"
+  );
   createProjectButton.style.fontWeight = "bold";
-  createProjectButton.style.fontSize = "25px";
-  createProjectButton.style.marginBottom = "10px";
-  
+  createProjectButton.style.fontSize = "22px";
+  createProjectButton.style.marginBottom = "8px";
+
   var p2BtnDiv = document.createElement("div");
   createProjectButton.appendChild(p2BtnDiv);
- var createP2Deploy = document.createElement("button");
- createP2Deploy.setAttribute(
-  "class",
-  "btn btn-outline-secondary btn-sm btn-light col-12"
-);
-createP2Deploy.textContent = "Deployed application";
-createP2Deploy.style.height = "30px";
-createProjectButton.appendChild(createP2Deploy);
-createP2Deploy.setAttribute("id","P2Deploy");
+  var createP2Deploy = document.createElement("button");
+  createP2Deploy.setAttribute(
+    "class",
+    "btn btn-outline-secondary btn-sm btn-light col-12"
+  );
+  createP2Deploy.textContent = "Deployed application";
+  createP2Deploy.style.height = "30px";
+  createProjectButton.appendChild(createP2Deploy);
+  createP2Deploy.setAttribute("id", "P2Deploy");
   // createProjectButton.setAttribute("style", "z-index: 1");
   var createGhLink1 = document.createElement("button");
   createGhLink1.setAttribute(
@@ -156,7 +138,7 @@ createP2Deploy.setAttribute("id","P2Deploy");
     window.open("https://github.com/humesandrew/Belly-Buster");
   };
 
-  var createProjectButton2 = document.createElement("button");
+  var createProjectButton2 = document.createElement("div");
   projectCardApiEl.appendChild(createProjectButton2);
   createProjectButton2.textContent = "ChartMD";
   createProjectButton2.setAttribute(
@@ -167,12 +149,17 @@ createP2Deploy.setAttribute("id","P2Deploy");
   createProjectButton2.setAttribute("style", "margin-top: 20px");
   createProjectButton2.setAttribute("style", "display: flex");
   createProjectButton2.setAttribute("style", "flex-direction: column");
-  createProjectButton2.setAttribute("style", "background-image: url('chartmd.png')", "background-size: contain");
+  createProjectButton2.setAttribute(
+    "style",
+    "background-image: url('chartmd.png')",
+    "background-size: contain"
+  );
   createProjectButton2.style.fontWeight = "bold";
-  createProjectButton2.style.fontSize = "25px";
-  createProjectButton2.style.marginBottom = "10px";
+  createProjectButton2.style.fontSize = "22px";
+  createProjectButton2.style.marginBottom = "8px";
   var addP2Content = document.createElement("h3");
-  addP2Content.textContent = "An application to manage your virtual doctor's office, using XXXX";
+  addP2Content.textContent =
+    "An application to manage your virtual doctor's office, using XXXX";
   addP2Content.style.fontSize = "15px";
   createProjectButton2.appendChild(addP2Content);
   createProjectButton2.setAttribute(
@@ -181,15 +168,15 @@ createP2Deploy.setAttribute("id","P2Deploy");
   );
   var p3BtnDiv = document.createElement("div");
   createProjectButton2.appendChild(p3BtnDiv);
- var createP3Deploy = document.createElement("button");
- createP3Deploy.setAttribute(
-  "class",
-  "btn btn-outline-secondary btn-sm btn-light col-12"
-);
-createP3Deploy.textContent = "Deployed application";
-createP3Deploy.style.height = "30px";
-createProjectButton2.appendChild(createP3Deploy);
-createP3Deploy.setAttribute("id","P3Deploy");
+  var createP3Deploy = document.createElement("button");
+  createP3Deploy.setAttribute(
+    "class",
+    "btn btn-outline-secondary btn-sm btn-light col-12"
+  );
+  createP3Deploy.textContent = "Deployed application";
+  createP3Deploy.style.height = "30px";
+  createProjectButton2.appendChild(createP3Deploy);
+  createP3Deploy.setAttribute("id", "P3Deploy");
   var createGhLink2 = document.createElement("button");
   createGhLink2.setAttribute(
     "class",
@@ -205,8 +192,6 @@ createP3Deploy.setAttribute("id","P3Deploy");
   };
   // createProjectButton.setAttribute("style", "background-size: cover");
 
-  
-
   var createApiCard = document.createElement("div");
 
   createApiCard.setAttribute("id", "apiCard");
@@ -216,8 +201,8 @@ createP3Deploy.setAttribute("id","P3Deploy");
   createApiCard.setAttribute("style", "overflow-y: scroll");
 
   projectCardApiEl.style.display = "flex";
-  projectCardApiEl.style.flexDirection = "column"
-  projectCardApiEl.style.justifyContent = "space-around"
+  projectCardApiEl.style.flexDirection = "column";
+  projectCardApiEl.style.justifyContent = "space-around";
   projectCardApiEl.setAttribute("style", "height: 75vh");
   // projectCardApiEl.setAttribute("style", "overflow-y: scroll");
 
@@ -241,12 +226,14 @@ createP3Deploy.setAttribute("id","P3Deploy");
                 "btn btn-secondary btn-lg btn-light"
               );
               addRepoSectionButton.setAttribute("style", "display: flex");
-              addRepoSectionButton.setAttribute("style", "flex-direction: column");
+              addRepoSectionButton.setAttribute(
+                "style",
+                "flex-direction: column"
+              );
 
               addRepoSectionButton.onclick = function () {
-
-                window.open(deployedUrl)
-              }
+                window.open(deployedUrl);
+              };
 
               var createGhApiLink = document.createElement("button");
               createGhApiLink.setAttribute(
@@ -255,38 +242,39 @@ createP3Deploy.setAttribute("id","P3Deploy");
               );
               createGhApiLink.setAttribute("id", "GhApiLink");
               createGhApiLink.textContent = "Github Repository";
-                const githubUrl = "https://github.com/humesandrew/" + data[i].name;
+              const githubUrl =
+                "https://github.com/humesandrew/" + data[i].name;
               createGhApiLink.onclick = function () {
-
-                window.open(githubUrl)
-              }
-
+                window.open(githubUrl);
+              };
 
               addRepoSectionButton.appendChild(createProjectBreak);
               addRepoSectionButton.appendChild(createGhApiLink);
-
-
-
 
               var repoEl = document.createElement("a");
               repoEl.textContent = repoName;
               repoEl.setAttribute("id", repoName);
 
-              repoEl.setAttribute("class", "btn btn-small btn-secondary btn-block");
+              repoEl.setAttribute(
+                "class",
+                "btn btn-small btn-secondary btn-block"
+              );
               repoEl.setAttribute("href", deployedUrl);
               repoEl.setAttribute("style", "display: flex");
               repoEl.setAttribute("style", "justify-content: space-between");
               repoEl.setAttribute("style", "align-items: column");
-              repoEl.setAttribute("style", "background-image: url('githubthumb.png')");
-              repoEl.style.color = 'black';
-              repoEl.style.fontWeight = 'bold';
+              repoEl.setAttribute(
+                "style",
+                "background-image: url('githubthumb.png')"
+              );
+              repoEl.style.color = "black";
+              repoEl.style.fontWeight = "bold";
 
-
-
-              projectCardApiEl.appendChild(createApiCard).appendChild(repoEl).appendChild(addRepoSectionButton);
+              projectCardApiEl
+                .appendChild(createApiCard)
+                .appendChild(repoEl)
+                .appendChild(addRepoSectionButton);
             }
-
-
           });
         } else {
           alert("Error: " + response.statusText);
@@ -299,9 +287,6 @@ createP3Deploy.setAttribute("id","P3Deploy");
 
   getRepos();
 
-
-
-
   var clickProjectButton = document.getElementById("P2Deploy");
   clickProjectButton.onclick = function () {
     window.open("https://humesandrew.github.io/Belly-Buster/");
@@ -312,42 +297,28 @@ createP3Deploy.setAttribute("id","P3Deploy");
     window.open("https://chartmd.herokuapp.com/");
   };
 
-
   var clickProjectButton3 = document.getElementById("P1Deploy");
   clickProjectButton3.onclick = function () {
     window.open("https://java4jsrs.herokuapp.com/");
   };
 };
 
-
-
-
-
-
-
-///// adding modal logic //////////////////////////////////
-// Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
+btn.onclick = function () {
   modal.style.display = "block";
-}
+};
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
