@@ -62,19 +62,22 @@ projectCard.onclick = function displayProjectCard() {
   var createP1Deploy = document.createElement("button");
   createP1Deploy.setAttribute(
     "class",
-    "btn btn-outline-secondary btn-sm btn-light col-12"
+    "btn btn-outline-secondary btn-sm btn-light col-9"
   );
   createP1Deploy.textContent = "Deployed application";
-  createP1Deploy.style.height = "30px";
+  createP1Deploy.style.height = "4vh";
+  createP1Deploy.style.fontSize = "12px";
   createProjectButton3.appendChild(createP1Deploy);
   var createGhLink3 = document.createElement("button");
   createGhLink3.setAttribute(
     "class",
-    "btn btn-outline-secondary btn-sm btn-light col-12"
+    "btn btn-outline-secondary btn-sm btn-light col-9"
   );
   createP1Deploy.setAttribute("id", "P1Deploy");
   createGhLink3.setAttribute("id", "GhLink3");
   createGhLink3.textContent = "Github repository";
+  createGhLink3.style.height = "4vh";
+  createGhLink3.style.fontSize = "12px";
   createProjectButton3.appendChild(createProjectBreak);
   createProjectButton3.appendChild(createGhLink3);
   var clickGhLink3Button = document.getElementById("GhLink3");
@@ -116,20 +119,23 @@ projectCard.onclick = function displayProjectCard() {
   var createP2Deploy = document.createElement("button");
   createP2Deploy.setAttribute(
     "class",
-    "btn btn-outline-secondary btn-sm btn-light col-12"
+    "btn btn-outline-secondary btn-sm btn-light col-9"
   );
   createP2Deploy.textContent = "Deployed application";
-  createP2Deploy.style.height = "30px";
+  createP2Deploy.style.height = "4vh";
+  createP2Deploy.style.fontSize = "12px";
   createProjectButton.appendChild(createP2Deploy);
   createP2Deploy.setAttribute("id", "P2Deploy");
   // createProjectButton.setAttribute("style", "z-index: 1");
   var createGhLink1 = document.createElement("button");
   createGhLink1.setAttribute(
     "class",
-    "btn btn-outline-secondary btn-sm btn-light col-12"
+    "btn btn-outline-secondary btn-sm btn-light col-9"
   );
   createGhLink1.setAttribute("id", "GhLink1");
-  createGhLink1.textContent = "Github Repository";
+  createGhLink1.textContent = "Github repository";
+  createGhLink1.style.height = "4vh";
+  createGhLink1.style.fontSize = "12px";
 
   createProjectButton.appendChild(createProjectBreak);
   createProjectButton.appendChild(createGhLink1);
@@ -171,19 +177,22 @@ projectCard.onclick = function displayProjectCard() {
   var createP3Deploy = document.createElement("button");
   createP3Deploy.setAttribute(
     "class",
-    "btn btn-outline-secondary btn-sm btn-light col-12"
+    "btn btn-outline-secondary btn-sm btn-light col-9"
   );
   createP3Deploy.textContent = "Deployed application";
-  createP3Deploy.style.height = "30px";
+  createP3Deploy.style.height = "4vh";
+  createP3Deploy.style.fontSize = "12px";
   createProjectButton2.appendChild(createP3Deploy);
   createP3Deploy.setAttribute("id", "P3Deploy");
   var createGhLink2 = document.createElement("button");
   createGhLink2.setAttribute(
     "class",
-    "btn btn-outline-secondary btn-sm btn-light col-12"
+    "btn btn-outline-secondary btn-sm btn-light col-9"
   );
   createGhLink2.setAttribute("id", "GhLink2");
-  createGhLink2.textContent = "Github Repository";
+  createGhLink2.textContent = "Github repository";
+  createGhLink2.style.height = "4vh";
+  createGhLink2.style.fontSize = "12px";
   createProjectButton2.appendChild(createProjectBreak);
   createProjectButton2.appendChild(createGhLink2);
   var clickGhLink2Button = document.getElementById("GhLink2");
@@ -203,7 +212,7 @@ projectCard.onclick = function displayProjectCard() {
   projectCardApiEl.style.display = "flex";
   projectCardApiEl.style.flexDirection = "column";
   projectCardApiEl.style.justifyContent = "space-around";
-  projectCardApiEl.setAttribute("style", "height: 75vh");
+  projectCardApiEl.setAttribute("style", "height: 95%");
   // projectCardApiEl.setAttribute("style", "overflow-y: scroll");
 
   projectCardApiEl.appendChild(createApiCard);
@@ -241,7 +250,7 @@ projectCard.onclick = function displayProjectCard() {
                 "btn btn-outline-secondary btn-sm btn-light col-12"
               );
               createGhApiLink.setAttribute("id", "GhApiLink");
-              createGhApiLink.textContent = "Github Repository";
+              createGhApiLink.textContent = "Github repository";
               const githubUrl =
                 "https://github.com/humesandrew/" + data[i].name;
               createGhApiLink.onclick = function () {

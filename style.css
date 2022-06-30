@@ -42,6 +42,12 @@ max-height: 100%;
 
 }
 
+@media (max-width: 650px) {
+    .andyPic {
+        display: none;
+    }
+}
+
 .listContainer {
     display: flex;
     justify-content: center;
@@ -74,15 +80,11 @@ max-height: 100%;
 }  */
 
 
-#P1Deploy {
- height: 50vh;
-    width: 75%;
-  
+.col-9 {
+    background-color: #dadaf7;
+    box-shadow: 0 1px 4px black; 
 }
 
-#projectButton3 {
-  height: 75%;
-}
 
 
 .projectCard {
