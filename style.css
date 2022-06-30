@@ -74,7 +74,15 @@ max-height: 100%;
 }  */
 
 
+#P1Deploy {
+ height: 50vh;
+    width: 75%;
+  
+}
 
+#projectButton3 {
+  height: 75%;
+}
 
 
 .projectCard {
@@ -85,7 +93,7 @@ max-height: 100%;
     align-items: center;
     justify-content: center;
     color: white;
-font-size: 40px
+font-size: 50px
 }
 
 
@@ -146,10 +154,7 @@ flex-wrap: wrap;
 }
 
 
-.createProjectButton2 {
-    margin-bottom: 500px;
-    margin-top: 0px;
-}
+
 
 #projectCardApiEl {
     background-color: transparent;
@@ -163,8 +168,12 @@ flex-wrap: wrap;
 
 h3 {
     font-weight: bold;
+ 
 }
 
+h2 {
+    font-weight: bold;
+}
 /*  ///// adding the modal css ///// */
 
 .modal {
