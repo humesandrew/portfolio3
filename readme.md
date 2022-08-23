@@ -16,7 +16,7 @@
   ## Usage
     Click on the Projects card to see my deployed projects and repositories. 
     
-      ![Screenshot](/portfolio3full.png?raw=true "Screenshot")
+    ![Screenshot](/portfolio3full.png?raw=true "Screenshot")
 
   ## License
     This project is licensed under humesandrew.
