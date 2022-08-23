@@ -227,7 +227,7 @@ projectCard.onclick = function displayProjectCard() {
 
             for (var i = 0; i < data.length; i++) {
               var repoName = data[i].name;
-              var deployedUrl = "https://humesandrew.github.io/" + data[i].name;
+              var deployedUrl = "https://humesandrew.github.io/" + data[i].name +"/";
 
               var addRepoSectionButton = document.createElement("button");
               addRepoSectionButton.setAttribute(
